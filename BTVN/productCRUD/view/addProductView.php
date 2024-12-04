@@ -19,7 +19,7 @@
     }
     ?>
 
-    <form action="../index.php" method="post">
+    <form action="../controller/productController.php" method="post">
         <div class="mb-3">
             <label for="productId" class="form-label d-none">ID</label>
             <input type="text" class="form-control d-none" name="productId" id="productId" value="<?= $productId ?>" readonly>

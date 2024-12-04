@@ -2,31 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quizz</title>
+    <title>Danh sách sinh viên</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <?php
-    // Đường dẫn tới file CSV
-    $filename = "KTPM3_Danh_sach_diem_danh.csv";
-
-    // Mảng chứa dữ liệu sinh viên
-    $sinhvien = [];
-
-    // Mở file CSV
-    if (($handle = fopen($filename, "r")) !== FALSE) {
-        // Đọc dòng đầu tiên (tiêu đề)
-        $headers = fgetcsv($handle, 1000, ",");
-        // Đọc từng dòng dữ liệu
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-            $sinhvien[] = array_map("trim",array_combine($headers, $data));
-        }
-
-        fclose($handle);
-    }
-
-    // In mảng sinh viên (chỉ để kiểm tra)
-//    print_r($sinhvien);
+        $filename = "KTPM3_Danh_sach_diem_danh.csv";
+        $file = file_get_contents($filename);
+        
     ?>
 
     <div class="container mt-5">
