@@ -10,10 +10,10 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container-fluid">
-        <a class="navbar-brand h1" href={{ route('posts.index')}}>CRUDSales</a>
+        <a class="navbar-brand h1" href="#">CRUDSales</a>
         <div class="justify-end ">
             <div class="col ">
-                <a class="btn btn-sm btn-success" href={{route('posts.create') }}>Add Post</a>
+                <a class="btn btn-sm btn-success" href="#">Add Post</a>
             </div>
         </div>
     </div>
@@ -35,11 +35,11 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-sm">
-                                <a href="{{ route('posts.edit', $sale->id) }}"
+                                <a href="#"
                                    class="btn btn-primary btn-sm">Edit</a>
                             </div>
                             <div class="col-sm">
-                                <form action="{{ route('posts.destroy', $sale->id)}}" method="post">
+                                <form action="#" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btnsm">Delete</button>
