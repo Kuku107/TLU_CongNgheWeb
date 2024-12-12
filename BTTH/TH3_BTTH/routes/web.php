@@ -10,7 +10,7 @@ use App\Http\Controllers\SaleController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get("/medicines", MedicineController::class . "@index")

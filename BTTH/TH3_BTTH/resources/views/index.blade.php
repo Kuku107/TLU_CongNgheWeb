@@ -239,50 +239,6 @@
     </style>
 </head>
 <body>
-@include("partials.nav");
-<div class="container-xl">
-    <div class="table-responsive">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Manage <b>Issues</b></h2>
-                    </div>
-                    <div class="col-sm-6">
-                        <a href="{{ route("medicines.index") }}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Medicine</span></a>
-                    </div>
-                </div>
-            </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                <tr>
-                    <th>Computer name</th>
-                    <th>Reported by</th>
-                    <th>Reported date</th>
-                    <th>Description</th>
-                    <th>Urgency</th>
-                    <th>Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach ($issues as $issue)
-                    <tr>
-                        <td>{{ $issue->computer_name }}</td>
-                        <td>{{ $issue->reported_by }}</td>
-                        <td>{{ $issue->reported_date }}</td>
-                        <td>{{ $issue->description }}</td>
-                        <th>{{ $issue->urgency }}</th>
-                        <th>{{ $issue->status }}</th>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+    @include("partials.nav");
 </body>
 </html>

@@ -239,6 +239,7 @@
     </style>
 </head>
 <body>
+@include("partials.nav");
 <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
