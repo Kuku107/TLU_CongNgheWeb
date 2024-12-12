@@ -1,4 +1,4 @@
-<div class="card mb-3">
+<div class="card w-100">
     <div class="card-header">
         <h5 class="card-title">{{ $post->title }}</h5>
     </div>
@@ -13,8 +13,8 @@
             <div class="col-sm">
                 <form action="{{ route('posts.destroy', $post->id) }}" method="post">
                     @csrf
-                    @method('delete')
-                    <button type="submit" class="btn btn-danger btn-sm" aria-label="Delete post">Delete</button>
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                 </form>
             </div>
         </div>

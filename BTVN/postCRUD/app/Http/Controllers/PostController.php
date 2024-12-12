@@ -30,8 +30,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => "required",
-            "content" => "required"
+            "title" => "required|max:255",
+            "content" => "required|min:10"
         ]);
         Post::create($request->all());
         return redirect() -> route("posts.index") -> with("success", "Post created successfully");
@@ -61,8 +61,8 @@ class PostController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            "title" => "required",
-            "content" => "required"
+            "title" => "required|max:255",
+            "content" => "required|min:10"
         ]);
         $post = Post::find($id);
         $post->update($request->all());
