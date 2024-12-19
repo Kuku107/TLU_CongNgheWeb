@@ -70,7 +70,7 @@ class IssueController extends Controller
             "computer_id" => "required",
             "reported_by" => "required",
             "reported_date" => "required|date",
-            "description" => "required|min:10|max:255",
+            "description" => "required|max:255",
             "urgency" => "required",
             "status" => "required"
         ]);
