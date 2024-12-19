@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label>Thời gian báo cáo</label>
-                    <input name="reported_date" type="date" class="form-control" value="{{ \Carbon\Carbon::parse($issue->reported_date)->format('Y-m-d')  }}" required>
+                    <input name="reported_date" type="date" class="form-control" value= {{ $issue->reported_date }} required>
 
                 </div>
                 <div class="form-group">
